@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WALTER - Inteligência Emocional</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="logo">WALTER</div>
+            <div class="nav-items">
+                <a href="#" class="nav-item active">Ansiedade</a>
+                <a href="#" class="nav-item">Depressão</a>
+                <a href="#" class="nav-item">Relacionamentos</a>
+                <a href="#" class="nav-item">Autoestima</a>
+                <a href="#" class="nav-item">Estresse</a>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <div class="content-wrapper">
+                <section class="hero-section">
+                    <div class="text-content">
+                        <div class="subtitle">Terapia Digital Gratuita</div>
+                        <h1 class="main-title">
+                            WALTER<br>
+                            TERAPEUTA DIGITAL
+                        </h1>
+                        <p class="description">
+                            Conte suas dores e receba ajuda imediata. Walter é um terapeuta digital 
+                            especializado em saúde mental que oferece suporte emocional 24h por dia, 
+                            7 dias por semana, de forma completamente gratuita.
+                        </p>
+                        <div class="cta-buttons">
+                            <a href="#" class="btn-primary-custom" id="exploreBtn">
+                                <i class="fas fa-heart me-2"></i>
+                                Começar Agora
+                            </a>
+                            <a href="#" class="btn-secondary-custom" id="howItWorks">
+                                Como funciona
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        <div class="therapy-form-container" id="therapyFormContainer">
+                            <div class="form-header">
+                                <h3>Como posso te ajudar hoje?</h3>
+                                <p>Conte o que está te incomodando e receba ajuda imediata</p>
+                            </div>
+                            
+                            <form class="therapy-form" id="therapyForm">
+                                <div class="form-group">
+                                    <label for="email">Seu e-mail</label>
+                                    <input type="email" id="email" name="email" required 
+                                           placeholder="seuemail@exemplo.com">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="problem">O que está te afligindo?</label>
+                                    <textarea id="problem" name="problem" required 
+                                              placeholder="Conte suas dores, medos, ansiedades... Walter está aqui para te ajudar."
+                                              rows="6"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn" id="submitBtn">
+                                    <i class="fas fa-paper-plane me-2"></i>
+                                    Receber Apoio Gratuito
+                                </button>
+                                
+                                <div class="form-footer">
+                                    <i class="fas fa-lock me-1"></i>
+                                    <small>Suas informações são confidenciais e seguras</small>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="stats-overlay">
+                            <div class="text-white">
+                                <div class="fw-bold">+10k</div>
+                                <div style="font-size: 0.8rem; opacity: 0.8;">Pessoas Ajudadas</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="tutorial-overlay" id="tutorialOverlay">
+            <div class="tutorial-content">
+                <button class="close-tutorial" id="closeTutorial">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <div class="tutorial-header">
+                    <h2>Como Funciona o WALTER</h2>
+                    <p>Siga estes simples passos para receber apoio emocional personalizado</p>
+                </div>
+                
+                <div class="tutorial-steps">
+                    <div class="tutorial-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Compartilhe Seu E-mail</h4>
+                            <p>Digite seu e-mail no campo indicado. Suas informações são 100% seguras e confidenciais.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tutorial-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Desabafe Suas Dores</h4>
+                            <p>Conte o que está te incomodando no campo de texto. Seja honesto e aberto - Walter está aqui para te ajudar.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tutorial-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Receba Apoio Imediato</h4>
+                            <p>Clique em "Receber Apoio Gratuito" e aguarde. Walter analisará sua situação com cuidado e empatia.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tutorial-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Resposta Personalizada</h4>
+                            <p>Em até 24 horas, você receberá uma resposta detalhada e personalizada em seu e-mail com orientações e apoio.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tutorial-actions">
+                    <button class="btn-tutorial primary" id="startNowTutorial">
+                        <i class="fas fa-heart me-2"></i>
+                        Começar Agora
+                    </button>
+                    <button class="btn-tutorial" id="closeTutorialBtn">
+                        Entendi
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-modal-overlay" id="successModalOverlay">
+            <div class="success-modal-content">
+                <button class="close-success-modal" id="closeSuccessModalBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="success-modal-icon">
+                    <i class="fas fa-check-circle"></i> 
+                </div>
+                <h2 class="success-modal-title">Sua mensagem foi enviada!</h2>
+                <p class="success-modal-message">
+                    Walter analisará suas palavras com cuidado e empatia.
+                    Você receberá uma resposta personalizada em seu e-mail imediatamente.
+                </p>
+                <div class="success-modal-upsell">
+                    <h4>Conecte-se Conosco!</h4>
+                    <p>Junte-se à nossa comunidade no Discord para continuar a conversa e receber apoio.</p>
+                    <a href="SEU_LINK_DO_DISCORD_AQUI" target="_blank" class="btn-tutorial primary" id="joinDiscordBtn" style="margin-top: 15px; margin-left: auto; margin-right: auto;">
+                        <i class="fab fa-discord me-2"></i>Entrar no Discord
+                    </a>
+                </div>
+                <button class="btn-tutorial" id="understoodSuccessBtn" style="margin-top: 20px; margin-left: auto; margin-right: auto;">
+                    Entendido
+                </button>
+                
+            </div>
+        </div>
+
+        <button class="expand-btn" id="expandBtn">
+            <i class="fas fa-expand-arrows-alt"></i>
+        </button>
+    </div>
+
+<script src="script.js"> </script>    
+</body>
+</html>
