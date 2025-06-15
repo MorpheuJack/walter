@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             submitBtn.disabled = true;
                         }
 
-                        const n8nWebhookUrl = 'https://7fcc-191-251-95-191.ngrok-free.app/webhook-test/1e041a43-981b-497f-9756-7ec3a4efae56'; 
+                        const n8nWebhookUrl = 'https://7fcc-191-251-95-191.ngrok-free.app/webhook/1e041a43-981b-497f-9756-7ec3a4efae56'; 
 
                         const dataToSend = {
                             email: email,
