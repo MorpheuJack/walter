@@ -306,45 +306,41 @@ document.addEventListener('DOMContentLoaded', function() {
                     submittedAt: new Date().toISOString() // Timestamp do envio
                 };
 
-                // Faz a requisição HTTP para o webhook
                 fetch(n8nWebhookUrl, {
-                    // Método POST: estamos ENVIANDO dados
-                    method: 'POST',
-
-                    // Cabeçalhos: informações extras sobre a requisição
-                    headers: {
-                        // Informa que estamos enviando dados em formato JSON
-                        'Content-Type': 'application/json',
-                        
-                        // Cabeçalho especial para pular a tela de aviso do ngrok
-                        'ngrok-skip-browser-warning': 'true'
-                    },
-
-                    // Corpo da requisição: os dados convertidos para JSON
-                    body: JSON.stringify(dataToSend),
-                })
-                .then(response => {
-                    // Verifica se a resposta foi bem-sucedida
-                    if (!response.ok) {
-                        return response.text().then(text => { 
-                            throw new Error(text || `A resposta da rede não foi 'ok': ${response.statusText}`) 
-                        });
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    // Sucesso: dados enviados com êxito
-                    console.log('Sucesso! Enviado para o n8n:', data);
-                    showSuccessModal(); // Mostra modal de sucesso
-                })
-                .catch((error) => {
-                    // Erro: algo deu errado no envio
-                    console.error('Erro ao enviar dados para o n8n:', error);
-                    alert('Houve um problema ao enviar seus dados. Detalhe: ' + error.message);
-                });
-            }
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning': 'true'
+    },
+    body: JSON.stringify(dataToSend),
+})
+.then(response => {
+    if (!response.ok) {
+        return response.text().then(text => { 
+            throw new Error(text || `A resposta da rede não foi 'ok': ${response.statusText}`) 
         });
     }
+    return response.json();
+})
+.then(data => {
+    console.log('Sucesso! Enviado para o n8n:', data);
+    showSuccessModal(); // Mostra modal de sucesso
+})
+.catch((error) => {
+    console.error('Erro ao enviar dados para o n8n:', error);
+    alert('Houve um problema ao enviar seus dados. Detalhe: ' + error.message);
+})
+.finally(() => {
+    // Restaura o botão de envio ao estado original
+    if (submitBtn) {
+        submitBtn.innerHTML = originalText; // Restaura texto original
+        submitBtn.disabled = false; // Habilita novamente o botão
+    }
+});
+    }
+});
+    }
+    
 
     // =========================================
     // SEÇÃO 6: BOTÃO "EXPLORAR"
