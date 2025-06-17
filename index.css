@@ -191,17 +191,19 @@ body {
     line-height: 1.1;
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
-    margin-top: 120px;
+    margin-top: 100px;
     margin-bottom: 0px;
 }
 
 .description {
-    font-size: clamp(1rem, 3vw, 1.1rem);
+    font-size: clamp(17px, 3vw, 1.1rem);
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 2rem;
-    margin-top: 50px;
+    margin-bottom: 3rem;
+    margin-top: 70px;
     max-width: 100%;
+    text-align: justify;
+    padding: 0 2rem;
 }
 
 /* ===== BOTÕES MOBILE-FIRST ===== */
@@ -677,7 +679,28 @@ body {
 }
 
 
+#background-animation {
+    position: fixed; /* ou 'absolute' se o body não tiver scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; /* Essencial para ficar atrás de tudo */
+    overflow: hidden; /* Evita que elementos da animação criem scrollbars */
+}
 
+/* Opcional: Garante que o fundo do seu site seja transparente para ver a animação */
+body {
+    background-color: transparent; 
+}
+
+/* Garanta que o seu conteúdo principal tenha um fundo para não ficar ilegível */
+main, header, footer {
+    position: relative; /* Garante que o z-index funcione corretamente */
+    z-index: 1;
+    /* Exemplo: pode ser que você precise de um fundo aqui */
+    /* background-color: rgba(255, 255, 255, 0.8); */
+}
 
 
 /* ===== MEDIA QUERIES MOBILE-FIRST ===== */

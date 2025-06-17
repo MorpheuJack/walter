@@ -534,3 +534,5 @@ if (document.readyState === 'loading') {
     // Se a página já carregou, cria as partículas imediatamente
     createFloatingParticles();
 }
+
+
