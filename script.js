@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 // URL do webhook n8n (serviço de automação)
-                const n8nWebhookUrl = 'https://7fcc-191-251-95-191.ngrok-free.app/webhook/1e041a43-981b-497f-9756-7ec3a4efae56'; 
+                const n8nWebhookUrl = 'https://d146-191-251-95-191.ngrok-free.app//webhook/1e041a43-981b-497f-9756-7ec3a4efae56'; 
 
                 // Prepara os dados para envio
                 const dataToSend = {
@@ -521,18 +521,5 @@ styleSheet.innerText = `
     }
 `;
 document.head.appendChild(styleSheet);
-
-// =========================================
-// SEÇÃO 12: INICIALIZAÇÃO DAS PARTÍCULAS
-// =========================================
-// Garante que as partículas sejam criadas após o carregamento da página
-
-if (document.readyState === 'loading') {
-    // Se a página ainda está carregando, aguarda o evento DOMContentLoaded
-    document.addEventListener('DOMContentLoaded', createFloatingParticles);
-} else {
-    // Se a página já carregou, cria as partículas imediatamente
-    createFloatingParticles();
-}
 
 
