@@ -191,6 +191,8 @@ body {
     line-height: 1.1;
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
+    margin-top: 120px;
+    margin-bottom: 0px;
 }
 
 .description {
@@ -198,6 +200,7 @@ body {
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 2rem;
+    margin-top: 50px;
     max-width: 100%;
 }
 
@@ -416,34 +419,6 @@ body {
     width: 100%;
     max-width: 200px;
     text-align: center;
-}
-
-/* ===== BOTÃO EXPANDIR ===== */
-.expand-btn {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    z-index: 10;
-    touch-action: manipulation;
-}
-
-.expand-btn:hover,
-.expand-btn:active {
-    background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.1);
 }
 
 /* ===== MODAIS MOBILE-FIRST ===== */
@@ -701,6 +676,10 @@ body {
     margin-bottom: 1rem;
 }
 
+
+
+
+
 /* ===== MEDIA QUERIES MOBILE-FIRST ===== */
 
 /* Tablets pequenos */
@@ -834,14 +813,6 @@ body {
         height: 600px;
     }
     
-    .stats-overlay {
-        position: absolute;
-        bottom: -15rem;
-        left: -1rem;
-        margin: 0;
-        max-width: none;
-        width: auto;
-    }
 }
 
 /* Desktop grande */

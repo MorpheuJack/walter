@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Elementos de navegação e interação
     const navItems = document.querySelectorAll('.nav-item');
     const exploreBtn = document.getElementById('exploreBtn');
-    const expandBtn = document.getElementById('expandBtn');
     const textContent = document.querySelector('.text-content');
     const heroImage = document.querySelector('.hero-image');
 
