@@ -852,6 +852,7 @@ body {
     
     .therapy-form-container {
         max-width: 450px;
+        align-self: start;
     }
 }
 
