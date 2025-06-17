@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- META TAGS E CONFIGURAÇÕES BÁSICAS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WALTER - Inteligência Emocional</title>
+    
+    <!-- IMPORTAÇÃO DE BIBLIOTECAS EXTERNAS -->
+    <!-- Bootstrap: Framework CSS para layout responsivo e componentes -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome: Biblioteca de ícones -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts: Fonte Inter para tipografia moderna -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="index.css">
-
+    <!-- CSS CUSTOMIZADO -->
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
+    <!-- CONTAINER PRINCIPAL DA APLICAÇÃO -->
     <div class="main-container">
-        <nav class="sidebar">
+
+    <!-- ===== BOTÃO MENU MOBILE ===== -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- ===== OVERLAY DA SIDEBAR ===== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ===== SEÇÃO DA BARRA LATERAL (SIDEBAR) ===== -->
+    <!-- Menu lateral com logo e navegação por categorias -->
+    <nav class="sidebar" id="sidebar" role="navigation" aria-label="Menu principal">
+            <!-- Logo da aplicação -->
             <div class="logo">WALTER</div>
+            
+            <!-- Menu de navegação com categorias de terapia -->
             <div class="nav-items">
-                <a href="#" class="nav-item active">Ansiedade</a>
+                <a href="recursos.html" class="nav-item">Recursos</a>
+                <a href="#" class="nav-item">Ansiedade</a>
                 <a href="#" class="nav-item">Depressão</a>
                 <a href="#" class="nav-item">Relacionamentos</a>
                 <a href="#" class="nav-item">Autoestima</a>
@@ -24,25 +47,40 @@
             </div>
         </nav>
 
+        <!-- ===== CONTEÚDO PRINCIPAL DA PÁGINA ===== -->
         <div class="main-content">
             <div class="content-wrapper">
+                
+                <!-- ===== SEÇÃO HERO (PRIMEIRA IMPRESSÃO) ===== -->
+                <!-- Área principal que o usuário vê primeiro -->
                 <section class="hero-section">
+                    
+                    <!-- LADO ESQUERDO: CONTEÚDO TEXTUAL -->
                     <div class="text-content">
+                        <!-- Subtítulo descritivo -->
                         <div class="subtitle">Terapia Digital Gratuita</div>
+                        
+                        <!-- Título principal -->
                         <h1 class="main-title">
                             WALTER<br>
-                            TERAPEUTA DIGITAL
+                            TERAPEUTA
                         </h1>
+                        
+                        <!-- Descrição do serviço -->
                         <p class="description">
                             Conte suas dores e receba ajuda imediata. Walter é um terapeuta digital 
                             especializado em saúde mental que oferece suporte emocional 24h por dia, 
                             7 dias por semana, de forma completamente gratuita.
                         </p>
+                        
+                        <!-- Botões de chamada para ação (CTA) -->
                         <div class="cta-buttons">
+                            <!-- Botão principal: Começar terapia -->
                             <a href="#" class="btn-primary-custom" id="exploreBtn">
                                 <i class="fas fa-heart me-2"></i>
                                 Começar Agora
                             </a>
+                            <!-- Botão secundário: Explicar funcionamento -->
                             <a href="#" class="btn-secondary-custom" id="howItWorks">
                                 Como funciona
                                 <i class="fas fa-arrow-right"></i>
@@ -50,20 +88,28 @@
                         </div>
                     </div>
                     
+                    <!-- LADO DIREITO: FORMULÁRIO E ESTATÍSTICAS -->
                     <div class="hero-image">
+                        
+                        <!-- ===== FORMULÁRIO DE TERAPIA ===== -->
+                        <!-- Container do formulário principal -->
                         <div class="therapy-form-container" id="therapyFormContainer">
+                            <!-- Cabeçalho do formulário -->
                             <div class="form-header">
                                 <h3>Como posso te ajudar hoje?</h3>
                                 <p>Conte o que está te incomodando e receba ajuda imediata</p>
                             </div>
                             
+                            <!-- Formulário para captura de dados -->
                             <form class="therapy-form" id="therapyForm">
+                                <!-- Campo de e-mail -->
                                 <div class="form-group">
                                     <label for="email">Seu e-mail</label>
                                     <input type="email" id="email" name="email" required 
                                            placeholder="seuemail@exemplo.com">
                                 </div>
                                 
+                                <!-- Campo de texto para o problema -->
                                 <div class="form-group">
                                     <label for="problem">O que está te afligindo?</label>
                                     <textarea id="problem" name="problem" required 
@@ -71,11 +117,13 @@
                                               rows="6"></textarea>
                                 </div>
                                 
+                                <!-- Botão de envio -->
                                 <button type="submit" class="submit-btn" id="submitBtn">
                                     <i class="fas fa-paper-plane me-2"></i>
                                     Receber Apoio Gratuito
                                 </button>
                                 
+                                <!-- Rodapé com informação de segurança -->
                                 <div class="form-footer">
                                     <i class="fas fa-lock me-1"></i>
                                     <small>Suas informações são confidenciais e seguras</small>
@@ -83,6 +131,8 @@
                             </form>
                         </div>
                         
+                        <!-- ===== ESTATÍSTICAS DE CREDIBILIDADE ===== -->
+                        <!-- Overlay com números que geram confiança -->
                         <div class="stats-overlay">
                             <div class="text-white">
                                 <div class="fw-bold">+10k</div>
@@ -94,18 +144,24 @@
             </div>
         </div>
 
+        <!-- ===== MODAL TUTORIAL ===== -->
+        <!-- Overlay que explica como usar a plataforma -->
         <div class="tutorial-overlay" id="tutorialOverlay">
             <div class="tutorial-content">
+                <!-- Botão para fechar o tutorial -->
                 <button class="close-tutorial" id="closeTutorial">
                     <i class="fas fa-times"></i>
                 </button>
                 
+                <!-- Cabeçalho do tutorial -->
                 <div class="tutorial-header">
                     <h2>Como Funciona o WALTER</h2>
                     <p>Siga estes simples passos para receber apoio emocional personalizado</p>
                 </div>
                 
+                <!-- Lista de passos do tutorial -->
                 <div class="tutorial-steps">
+                    <!-- Passo 1: Compartilhar e-mail -->
                     <div class="tutorial-step">
                         <div class="step-number">1</div>
                         <div class="step-content">
@@ -114,6 +170,7 @@
                         </div>
                     </div>
                     
+                    <!-- Passo 2: Desabafar -->
                     <div class="tutorial-step">
                         <div class="step-number">2</div>
                         <div class="step-content">
@@ -122,6 +179,7 @@
                         </div>
                     </div>
                     
+                    <!-- Passo 3: Enviar formulário -->
                     <div class="tutorial-step">
                         <div class="step-number">3</div>
                         <div class="step-content">
@@ -130,6 +188,7 @@
                         </div>
                     </div>
                     
+                    <!-- Passo 4: Receber resposta -->
                     <div class="tutorial-step">
                         <div class="step-number">4</div>
                         <div class="step-content">
@@ -139,11 +198,14 @@
                     </div>
                 </div>
                 
+                <!-- Botões de ação do tutorial -->
                 <div class="tutorial-actions">
+                    <!-- Botão para começar imediatamente -->
                     <button class="btn-tutorial primary" id="startNowTutorial">
                         <i class="fas fa-heart me-2"></i>
                         Começar Agora
                     </button>
+                    <!-- Botão para fechar tutorial -->
                     <button class="btn-tutorial" id="closeTutorialBtn">
                         Entendi
                     </button>
@@ -151,38 +213,54 @@
             </div>
         </div>
 
+        <!-- ===== MODAL DE SUCESSO ===== -->
+        <!-- Exibido após o usuário enviar o formulário -->
         <div class="success-modal-overlay" id="successModalOverlay">
             <div class="success-modal-content">
+                <!-- Botão para fechar modal -->
                 <button class="close-success-modal" id="closeSuccessModalBtn">
                     <i class="fas fa-times"></i>
                 </button>
+                
+                <!-- Ícone de sucesso -->
                 <div class="success-modal-icon">
                     <i class="fas fa-check-circle"></i> 
                 </div>
+                
+                <!-- Título e mensagem de confirmação -->
                 <h2 class="success-modal-title">Sua mensagem foi enviada!</h2>
                 <p class="success-modal-message">
                     Walter analisará suas palavras com cuidado e empatia.
                     Você receberá uma resposta personalizada em seu e-mail imediatamente.
                 </p>
+                
+                <!-- ===== SEÇÃO DE UPSELL ===== -->
+                <!-- Convite para participar da comunidade -->
                 <div class="success-modal-upsell">
                     <h4>Conecte-se Conosco!</h4>
                     <p>Junte-se à nossa comunidade no Discord para continuar a conversa e receber apoio.</p>
+                    <!-- Botão para Discord (precisa configurar o link) -->
                     <a href="SEU_LINK_DO_DISCORD_AQUI" target="_blank" class="btn-tutorial primary" id="joinDiscordBtn" style="margin-top: 15px; margin-left: auto; margin-right: auto;">
                         <i class="fab fa-discord me-2"></i>Entrar no Discord
                     </a>
                 </div>
+                
+                <!-- Botão para fechar modal -->
                 <button class="btn-tutorial" id="understoodSuccessBtn" style="margin-top: 20px; margin-left: auto; margin-right: auto;">
                     Entendido
                 </button>
-                
             </div>
         </div>
 
+        <!-- ===== BOTÃO DE EXPANSÃO ===== -->
+        <!-- Botão flutuante para expandir/contrair interface (funcionalidade específica) -->
         <button class="expand-btn" id="expandBtn">
             <i class="fas fa-expand-arrows-alt"></i>
         </button>
     </div>
 
-<script src="script.js"> </script>    
+    <!-- ===== JAVASCRIPT ===== -->
+    <!-- Script responsável pela interatividade da página -->
+    <script src="script.js"></script>    
 </body>
 </html>
