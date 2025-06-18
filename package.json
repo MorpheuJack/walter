@@ -1,0 +1,22 @@
+{
+  "name": "walter-terapeuta",
+  "version": "1.0.0",
+  "description": "WALTER - Terapeuta Digital para Saúde Mental",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx vite --host",
+    "build": "npx vite build",
+    "preview": "npx vite preview"
+  },
+  "keywords": [
+    "terapia",
+    "saude-mental",
+    "bem-estar",
+    "terapeuta-digital"
+  ],
+  "author": "WALTER Team",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
