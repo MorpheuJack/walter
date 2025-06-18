@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos - WALTER Terapeuta</title>
+    
+    <!-- Bootstrap e Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS customizado -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="recursos.css">
+</head>
+
+<body>
+    <!-- Animação de fundo -->
+    <div class="animated-gradient"></div>
+    <div class="waves"></div>
+    <div class="particles" id="particles"></div>
+    
+    <!-- Orbes decorativas -->
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+    <div class="main-container">
+        <!-- Botão Menu Mobile -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Overlay da Sidebar -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar" role="navigation" aria-label="Menu principal">
+            <div class="logo">WALTER</div>
+            <div class="nav-items">
+                <a href="index.html" class="nav-item">Início</a>
+                <a href="recursos.html" class="nav-item active">Recursos</a>
+                <a href="#" class="nav-item">Ansiedade</a>
+                <a href="#" class="nav-item">Depressão</a>
+                <a href="#" class="nav-item">Relacionamentos</a>
+                <a href="#" class="nav-item">Autoestima</a>
+                <a href="#" class="nav-item">Estresse</a>
+            </div>
+        </nav>
+
+        <!-- Conteúdo Principal -->
+        <div class="main-content">
+            <!-- Header da Página -->
+            <header class="resources-header">
+                <div class="header-content">
+                    <h1 class="page-title">Biblioteca de Recursos</h1>
+                    <p class="page-subtitle">Ferramentas e técnicas para seu bem-estar emocional</p>
+                </div>
+                
+                <!-- Filtros de Categoria -->
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">
+                        <i class="fas fa-th-large"></i>
+                        Todos
+                    </button>
+                    <button class="filter-btn" data-category="breathing">
+                        <i class="fas fa-wind"></i>
+                        Respiração
+                    </button>
+                    <button class="filter-btn" data-category="meditation">
+                        <i class="fas fa-om"></i>
+                        Meditação
+                    </button>
+                    <button class="filter-btn" data-category="exercises">
+                        <i class="fas fa-dumbbell"></i>
+                        Exercícios
+                    </button>
+                    <button class="filter-btn" data-category="journal">
+                        <i class="fas fa-book"></i>
+                        Diário
+                    </button>
+                    <button class="filter-btn" data-category="emergency">
+                        <i class="fas fa-heart-pulse"></i>
+                        Emergência
+                    </button>
+                </div>
+            </header>
+
+            <!-- Grid de Recursos -->
+            <div class="resources-grid">
+                
+                <!-- Exercício de Respiração 4-7-8 -->
+                <div class="resource-card" data-category="breathing">
+                    <div class="card-header">
+                        <div class="card-icon breathing">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="card-badge">Respiração</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Respiração 4-7-8</h3>
+                        <p>Técnica poderosa para reduzir ansiedade e promover relaxamento profundo.</p>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 5-10 min</span>
+                            <span><i class="fas fa-star"></i> Iniciante</span>
+                        </div>
+                    </div>
+                    <button class="card-action" onclick="openBreathingExercise()">
+                        <i class="fas fa-play"></i>
+                        Iniciar Exercício
+                    </button>
+                </div>
+
+                <!-- Meditação Guiada -->
+                <div class="resource-card" data-category="meditation">
+                    <div class="card-header">
+                        <div class="card-icon meditation">
+                            <i class="fas fa-om"></i>
+                        </div>
+                        <div class="card-badge">Meditação</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Meditação Mindfulness</h3>
+                        <p>Pratique a atenção plena com exercícios guiados de meditação.</p>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 10-20 min</span>
+                            <span><i class="fas fa-star"></i> Todos os níveis</span>
+                        </div>
+                    </div>
+                    <button class="card-action" onclick="openMeditationGuide()">
+                        <i class="fas fa-play"></i>
+                        Começar Meditação
+                    </button>
+                </div>
+
+                <!-- Diário de Gratidão -->
+                <div class="resource-card" data-category="journal">
+                    <div class="card-header">
+                        <div class="card-icon journal">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="card-badge">Diário</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Diário de Gratidão</h3>
+                        <p>Cultive pensamentos positivos registrando momentos de gratidão diários.</p>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                            <span><i class="fas fa-star"></i> Iniciante</span>
+                        </div>
+                    </div>
+                    <button class="card-action" onclick="openGratitudeJournal()">
+                        <i class="fas fa-pen"></i>
+                        Abrir Diário
+                    </button>
+                </div>
+
+                <!-- Exercícios de Relaxamento -->
+                <div class="resource-card" data-category="exercises">
+                    <div class="card-header">
+                        <div class="card-icon exercises">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <div class="card-badge">Exercícios</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Relaxamento Muscular</h3>
+                        <p>Técnica progressiva para aliviar tensões físicas e mentais.</p>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 15 min</span>
+                            <span><i class="fas fa-star"></i> Intermediário</span>
+                        </div>
+                    </div>
+                    <button class="card-action" onclick="openMuscleRelaxation()">
+                        <i class="fas fa-play"></i>
+                        Iniciar Exercício
+                    </button>
+                </div>
+
+                <!-- Kit de Emergência -->
+                <div class="resource-card emergency-card" data-category="emergency">
+                    <div class="card-header">
+                        <div class="card-icon emergency">
+                            <i class="fas fa-heart-pulse"></i>
+                        </div>
+                        <div class="card-badge emergency">Emergência</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Kit de Crise</h3>
+                        <p>Ferramentas rápidas para momentos de ansiedade intensa ou pânico.</p>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> Imediato</span>
+                            <span><i class="fas fa-exclamation-triangle"></i> Urgente</span>
+                        </div>
+                    </div>
+                    <button class="card-action emergency-action" onclick="openEmergencyKit()">
+                        <i class="fas fa-first-aid"></i>
+                        Acesso Rápido
+                    </button>
+                </div>
+
+                <!-- Técnica 5-4-3-2-1 -->
+                <div class="resource-card" data-category="exercises">
+                    <div class="card-header">
+                        <div class="card-icon exercises">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="card-badge">Exercícios</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Técnica 5-4-3-2-1</h3>
+                        <p>Exercício de grounding para reconectar com o presente.</p>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 3-5 min</span>
+                            <span><i class="fas fa-star"></i> Iniciante</span>
+                        </div>
+                    </div>
+                    <button class="card-action" onclick="openGroundingExercise()">
+                        <i class="fas fa-play"></i>
+                        Começar Agora
+                    </button>
+                </div>
+
+                <!-- Diário de Humor -->
+                <div class="resource-card" data-category="journal">
+                    <div class="card-header">
+                        <div class="card-icon journal">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="card-badge">Diário</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Rastreador de Humor</h3>
+                        <p>Monitore seus padrões emocionais e identifique gatilhos.</p>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 2 min</span>
+                            <span><i class="fas fa-star"></i> Todos os níveis</span>
+                        </div>
+                    </div>
+                    <button class="card-action" onclick="openMoodTracker()">
+                        <i class="fas fa-chart-bar"></i>
+                        Registrar Humor
+                    </button>
+                </div>
+
+                <!-- Respiração Box -->
+                <div class="resource-card" data-category="breathing">
+                    <div class="card-header">
+                        <div class="card-icon breathing">
+                            <i class="fas fa-square"></i>
+                        </div>
+                        <div class="card-badge">Respiração</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Respiração Box</h3>
+                        <p>Técnica de respiração quadrada para foco e concentração.</p>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 5-15 min</span>
+                            <span><i class="fas fa-star"></i> Intermediário</span>
+                        </div>
+                    </div>
+                    <button class="card-action" onclick="openBoxBreathing()">
+                        <i class="fas fa-play"></i>
+                        Iniciar Prática
+                    </button>
+                </div>
+
+                <!-- Meditação Body Scan -->
+                <div class="resource-card" data-category="meditation">
+                    <div class="card-header">
+                        <div class="card-icon meditation">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="card-badge">Meditação</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Body Scan</h3>
+                        <p>Escaneamento corporal para consciência e relaxamento profundo.</p>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 20-30 min</span>
+                            <span><i class="fas fa-star"></i> Avançado</span>
+                        </div>
+                    </div>
+                    <button class="card-action" onclick="openBodyScan()">
+                        <i class="fas fa-play"></i>
+                        Começar Scan
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Seção de Estatísticas -->
+            <div class="stats-section">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number">9</div>
+                        <div class="stat-label">Ferramentas Disponíveis</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Acesso Livre</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Gratuito</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modais dos Exercícios -->
+    
+    <!-- Modal Respiração 4-7-8 -->
+    <div class="exercise-modal" id="breathingModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('breathingModal')">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h2>Respiração 4-7-8</h2>
+                <p>Inspire por 4, segure por 7, expire por 8</p>
+            </div>
+            <div class="breathing-exercise">
+                <div class="breathing-circle" id="breathingCircle">
+                    <div class="breathing-text" id="breathingText">Prepare-se</div>
+                </div>
+                <div class="breathing-controls">
+                    <button class="control-btn" id="startBreathing" onclick="startBreathingExercise()">
+                        <i class="fas fa-play"></i> Iniciar
+                    </button>
+                    <button class="control-btn" id="pauseBreathing" onclick="pauseBreathingExercise()" style="display: none;">
+                        <i class="fas fa-pause"></i> Pausar
+                    </button>
+                    <button class="control-btn" onclick="resetBreathingExercise()">
+                        <i class="fas fa-redo"></i> Reiniciar
+                    </button>
+                </div>
+                <div class="cycle-counter">
+                    Ciclo: <span id="cycleCount">0</span>/5
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Kit de Emergência -->
+    <div class="exercise-modal emergency-modal" id="emergencyModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('emergencyModal')">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header emergency-header">
+                <h2>Kit de Crise</h2>
+                <p>Você não está sozinho. Respire fundo e escolha uma ferramenta:</p>
+            </div>
+            <div class="emergency-tools">
+                <button class="emergency-tool" onclick="startEmergencyBreathing()">
+                    <i class="fas fa-wind"></i>
+                    <span>Respiração de Emergência</span>
+                </button>
+                <button class="emergency-tool" onclick="startGroundingNow()">
+                    <i class="fas fa-anchor"></i>
+                    <span>Técnica 5-4-3-2-1</span>
+                </button>
+                <button class="emergency-tool" onclick="showAffirmations()">
+                    <i class="fas fa-heart"></i>
+                    <span>Afirmações Positivas</span>
+                </button>
+                <button class="emergency-tool" onclick="showEmergencyContacts()">
+                    <i class="fas fa-phone"></i>
+                    <span>Contatos de Ajuda</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Diário de Gratidão -->
+    <div class="exercise-modal" id="gratitudeModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('gratitudeModal')">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h2>Diário de Gratidão</h2>
+                <p>Liste 3 coisas pelas quais você é grato hoje:</p>
+            </div>
+            <div class="gratitude-form">
+                <div class="gratitude-item">
+                    <label>1. Sou grato por...</label>
+                    <textarea placeholder="Ex: Ter saúde para mais um dia"></textarea>
+                </div>
+                <div class="gratitude-item">
+                    <label>2. Sou grato por...</label>
+                    <textarea placeholder="Ex: O apoio da minha família"></textarea>
+                </div>
+                <div class="gratitude-item">
+                    <label>3. Sou grato por...</label>
+                    <textarea placeholder="Ex: As pequenas alegrias do dia"></textarea>
+                </div>
+                <button class="save-gratitude" onclick="saveGratitude()">
+                    <i class="fas fa-save"></i> Salvar no Coração
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Walter Terapeuta. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="recursos.js"></script>
+</body>
+</html>
