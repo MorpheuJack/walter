@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 // URL do webhook n8n (serviço de automação)
-                const n8nWebhookUrl = 'https://9610-179-179-179-145.ngrok-free.app/webhook/8e1b3a4a-174a-4f47-8223-2a20840d0f9b';
+                const n8nWebhookUrl = 'https://2a70-179-179-178-137.ngrok-free.app/webhook/8e1b3a4a-174a-4f47-8223-2a20840d0f9b';
 
                 // Prepara os dados para envio
                 const dataToSend = {
